@@ -1,0 +1,173 @@
+/* === RESET & BASE === */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Times New Roman', Times, serif;
+  background: #f5f7fa;
+  color: #2c3e50;
+}
+
+/* === BASE ELEMENTS === */
+ul {
+  padding-left: 20px;
+}
+a {
+  color: #1e66ac;
+  text-decoration: none;
+}
+a:hover,
+.project p a:hover {
+  text-decoration: underline;
+  color: #144d7a;
+}
+
+/* === CONTAINER === */
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3 {
+  color: #1c1f26;
+  margin-bottom: 10px;
+}
+h1 { font-size: 28px; }
+h2 {
+  font-size: 22px;
+  border-bottom: 2px solid #1e66ac;
+  padding-bottom: 5px;
+}
+h3 { font-size: 18px; }
+
+/* === PROFILE HEADER === */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+.profile-info h1 {
+  margin: 0;
+  color: #1e66ac;
+}
+.profile-info p {
+  margin: 4px 0;
+}
+
+/* === CONTACT INFO === */
+.contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+.contact-inline p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.contact i {
+  margin-right: 10px;
+  color: #1e66ac;
+}
+
+/* === SECTION === */
+.section {
+  margin: 30px 0 25px;
+}
+.section h2 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  color: #1e66ac;
+}
+.section ul li {
+  margin-bottom: 5px;
+}
+
+/* === ABOUT ME CENTER === */
+.section.about-me {
+  text-align: justify;
+}
+
+/* === SKILLS === */
+.skills, .soft-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.skills div, .soft-skills div {
+  margin: 5px 0;
+}
+.rating {
+  margin-left: 10px;
+  color: #f5c518; /* Nhẹ nhàng, chuyên nghiệp */
+}
+
+/* === JOBS & PROJECTS === */
+.project, .job {
+  margin-bottom: 20px;
+}
+.project h3 {
+  margin-bottom: 5px;
+}
+
+/* === SCROLL EFFECT === */
+.scroll-reveal {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.scroll-reveal.reveal {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 16px; }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .skills, .soft-skills {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  .contact-inline {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 10px;
+  }
+}
